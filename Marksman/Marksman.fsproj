@@ -8,11 +8,8 @@
         <EnableLint>false</EnableLint>
     </PropertyGroup>
     <Target Name="Version" BeforeTargets="BeforeBuild">
-        <Exec Command="git describe --always --dirty" ConsoleToMSBuild="true">
-            <Output TaskParameter="ConsoleOutput" PropertyName="VersionString"/>
-        </Exec>
         <PropertyGroup>
-            <VersionSuffix>$(VersionString)</VersionSuffix>
+            <VersionSuffix>2022-09-13</VersionSuffix>
             <Version>$(VersionPrefix)-$(VersionSuffix)</Version>
         </PropertyGroup>
     </Target>
